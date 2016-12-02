@@ -12,6 +12,7 @@
 		A3F45F5A1DF1D7A2007ED140 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3F45F581DF1D7A2007ED140 /* Main.storyboard */; };
 		A3F45F5C1DF1D7A2007ED140 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3F45F5B1DF1D7A2007ED140 /* Assets.xcassets */; };
 		A3F45F5F1DF1D7A2007ED140 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3F45F5D1DF1D7A2007ED140 /* LaunchScreen.storyboard */; };
+		A3F45F671DF1DCE8007ED140 /* KHL_logo_shield.svg.png in Resources */ = {isa = PBXBuildFile; fileRef = A3F45F661DF1DCE8007ED140 /* KHL_logo_shield.svg.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		A3F45F5B1DF1D7A2007ED140 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A3F45F5E1DF1D7A2007ED140 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A3F45F601DF1D7A2007ED140 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A3F45F661DF1DCE8007ED140 /* KHL_logo_shield.svg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = KHL_logo_shield.svg.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				A3F45F541DF1D7A2007ED140 /* AppDelegate.swift */,
 				A3F45F561DF1D7A2007ED140 /* ViewController.swift */,
 				A3F45F581DF1D7A2007ED140 /* Main.storyboard */,
+				A3F45F661DF1DCE8007ED140 /* KHL_logo_shield.svg.png */,
 				A3F45F5B1DF1D7A2007ED140 /* Assets.xcassets */,
 				A3F45F5D1DF1D7A2007ED140 /* LaunchScreen.storyboard */,
 				A3F45F601DF1D7A2007ED140 /* Info.plist */,
@@ -126,6 +129,7 @@
 				A3F45F5F1DF1D7A2007ED140 /* LaunchScreen.storyboard in Resources */,
 				A3F45F5C1DF1D7A2007ED140 /* Assets.xcassets in Resources */,
 				A3F45F5A1DF1D7A2007ED140 /* Main.storyboard in Resources */,
+				A3F45F671DF1DCE8007ED140 /* KHL_logo_shield.svg.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
