@@ -10,8 +10,37 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var minutes = 10
+    var seconds = 30
+    
     var timer = Timer()
+    
+    var timeCount = 600
+    var timeInterval:TimeInterval = 1
+    
+    func timeString(time:TimeInterval) -> String {
+        let minutes = Int(time) / 60
+        //let seconds = Int(time) % 60
+        let seconds = time - Double(minutes) * 60
+        //let secondsFraction = seconds - Double(Int(seconds))
+        return String(format:"%02i:%02i",minutes,Int(seconds))
+    }
+    
+    
+    func decreaseTimer() {
+        
+        if timeCount > 0 {
+            
+            timeCount -=  1
+            
+            timelabel.text = timeString(time: TimeInterval(timeCount))
+            
+        } else {
+            
+            timer.invalidate()
+            
+        }
+        
+    }
 
     
  // Controls Home Score
@@ -38,28 +67,43 @@ class ViewController: UIViewController {
 // Slider
     @IBOutlet weak var sliderOutlet: UISlider!
     @IBAction func slider(_ sender: UISlider) {
-        minutes = Int(sender.value)
-        timelabel.text = String(minutes)
+        seconds = Int(sender.value)
+        timelabel.text = String(seconds)
     }
     
     
 // Toolbar
     
-    @IBAction func playButton(_ sender: Any) {
+        
+    @IBAction func playButton(_ sender: Any) { // Starts the Timer
+        
+        timelabel.text = timeString(time: TimeInterval(timeCount))
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.decreaseTimer), userInfo: nil, repeats: true)
+       
+                sliderOutlet.isHidden = true
         
         
-        sliderOutlet.isHidden = true
     }
-    @IBAction func pauseButton(_ sender: Any) {
-        
+    
+  
+   
+    
+    @IBAction func pauseButton(_ sender: Any) { //Pauses the Timer
+        timer.invalidate()
         sliderOutlet.isHidden = false
+        
     }
   
     @IBAction func newGameButton(_ sender: Any) {  // Resets scores to zero and returns clock to default
+        timeCount = 600
         
+        timelabel.text = timeString(time: TimeInterval(timeCount))
         homeScore.text = String(0)
         awayScore.text = String(0)
         sliderOutlet.isHidden = false
+        
+        
+        
     }
     
    
