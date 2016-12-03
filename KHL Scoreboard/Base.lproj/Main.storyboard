@@ -154,6 +154,8 @@
                         <outlet property="awayStepper" destination="AFX-Ca-b31" id="xD6-WB-zLh"/>
                         <outlet property="homeScore" destination="2eX-Su-AhX" id="XAl-wZ-4Ym"/>
                         <outlet property="homeStepper" destination="Qra-ZH-dVg" id="SXF-yw-acl"/>
+                        <outlet property="newGameOutlet" destination="XE0-nT-TsD" id="jXx-af-eu6"/>
+                        <outlet property="playOutlet" destination="ieM-4b-hzk" id="RxL-3t-JeM"/>
                         <outlet property="sliderOutlet" destination="H1f-Ey-HHO" id="eYe-4s-RA1"/>
                         <outlet property="timelabel" destination="mRL-6L-6eG" id="yyy-SF-RSA"/>
                     </connections>

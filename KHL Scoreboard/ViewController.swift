@@ -10,7 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var seconds = 30
+    var minutes = 30
     
     var timer = Timer()
     
@@ -29,9 +29,7 @@ class ViewController: UIViewController {
     func decreaseTimer() {
         
         if timeCount > 0 {
-            
             timeCount -=  1
-            
             timelabel.text = timeString(time: TimeInterval(timeCount))
             
         } else {
@@ -67,20 +65,26 @@ class ViewController: UIViewController {
 // Slider
     @IBOutlet weak var sliderOutlet: UISlider!
     @IBAction func slider(_ sender: UISlider) {
-        seconds = Int(sender.value)
-        timelabel.text = String(seconds)
+        minutes = Int(sender.value) * 60
+        timelabel.text = timeString(time: TimeInterval(minutes))
+        timeCount = minutes
     }
+    
     
     
 // Toolbar
     
         
+
+    @IBOutlet weak var playOutlet: UIBarButtonItem!
     @IBAction func playButton(_ sender: Any) { // Starts the Timer
         
-        timelabel.text = timeString(time: TimeInterval(timeCount))
+      
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(ViewController.decreaseTimer), userInfo: nil, repeats: true)
        
-                sliderOutlet.isHidden = true
+        sliderOutlet.isHidden = true
+        playOutlet.isEnabled = false
+        newGameOutlet.isEnabled = false
         
         
     }
@@ -91,15 +95,20 @@ class ViewController: UIViewController {
     @IBAction func pauseButton(_ sender: Any) { //Pauses the Timer
         timer.invalidate()
         sliderOutlet.isHidden = false
+        playOutlet.isEnabled = true
+        newGameOutlet.isEnabled = true
         
     }
   
+    @IBOutlet weak var newGameOutlet: UIBarButtonItem!
     @IBAction func newGameButton(_ sender: Any) {  // Resets scores to zero and returns clock to default
         timeCount = 600
         
         timelabel.text = timeString(time: TimeInterval(timeCount))
         homeScore.text = String(0)
+        homeStepper.value = 0
         awayScore.text = String(0)
+        awayStepper.value = 0
         sliderOutlet.isHidden = false
         
         
