@@ -7,15 +7,15 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
     
     var minutes = 30
-    
     var timer = Timer()
-    
     var timeCount = 600
     var timeInterval:TimeInterval = 1
+    var audioPlayer = AVAudioPlayer()
     
     func timeString(time:TimeInterval) -> String {
         let minutes = Int(time) / 60
@@ -32,9 +32,10 @@ class ViewController: UIViewController {
             timeCount -=  1
             timelabel.text = timeString(time: TimeInterval(timeCount))
             
-        } else {
+        } else if timeCount == 0 {
             
             timer.invalidate()
+            audioPlayer.play()
             
         }
         
@@ -97,6 +98,7 @@ class ViewController: UIViewController {
         sliderOutlet.isHidden = false
         playOutlet.isEnabled = true
         newGameOutlet.isEnabled = true
+        audioPlayer.stop()
         
     }
   
@@ -122,6 +124,16 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        do
+        {
+            let audioPath = Bundle.main.path(forResource: "Airhorn", ofType: ".mp3")
+            try audioPlayer = AVAudioPlayer(contentsOf: URL(fileURLWithPath: audioPath!))
+        }
+        catch
+        {
+            //ERROR
+        }
     }
 
     override func didReceiveMemoryWarning() {
