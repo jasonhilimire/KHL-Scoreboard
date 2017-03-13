@@ -59,8 +59,8 @@
 				A3F45F541DF1D7A2007ED140 /* AppDelegate.swift */,
 				A3F45F561DF1D7A2007ED140 /* ViewController.swift */,
 				A3F45F581DF1D7A2007ED140 /* Main.storyboard */,
-				A3F45F661DF1DCE8007ED140 /* KHL_logo_shield.svg.png */,
 				A3F45F5B1DF1D7A2007ED140 /* Assets.xcassets */,
+				A3F45F661DF1DCE8007ED140 /* KHL_logo_shield.svg.png */,
 				A3F45F5D1DF1D7A2007ED140 /* LaunchScreen.storyboard */,
 				A3F45F601DF1D7A2007ED140 /* Info.plist */,
 			);
