@@ -21,6 +21,7 @@ class ViewController: UIViewController {
         
         homeScore.text = "\(Int(homeStepper.value))"
     }
+    @IBOutlet weak var homeLabel: UILabel!
     
 // Controls Away Score
     
@@ -41,6 +42,7 @@ class ViewController: UIViewController {
         minutes = Int(sender.value)
         timelabel.text = String(minutes)
     }
+    @IBOutlet weak var awayLabel: UILabel!
     
     
 // Toolbar
@@ -68,7 +70,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    
+        homeScore.layer.borderWidth = 1
+        homeLabel.layer.borderWidth = 1
+        awayScore.layer.borderWidth = 1
+        awayLabel.layer.borderWidth = 1
     }
 
     override func didReceiveMemoryWarning() {

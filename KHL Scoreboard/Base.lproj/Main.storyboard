@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12106.1" systemVersion="16E183b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16F43c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12074.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,6 +21,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="bg.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="k3v-C6-c9W">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="331"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2eX-Su-AhX">
                                 <rect key="frame" x="68" y="20" width="100" height="100"/>
                                 <color key="backgroundColor" red="0.078396700319999998" green="0.48059427739999999" blue="0.75471824409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -32,9 +35,9 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Qra-ZH-dVg">
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="Qra-ZH-dVg">
                                 <rect key="frame" x="72" y="128" width="94" height="29"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <action selector="homeScoreStepper:" destination="BYZ-38-t0r" eventType="valueChanged" id="IDM-Sc-Yw8"/>
                                 </connections>
@@ -68,8 +71,9 @@
                                     <constraint firstAttribute="width" constant="240" id="aV9-ud-a0l"/>
                                 </constraints>
                             </imageView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jL8-JQ-PFk">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jL8-JQ-PFk">
                                 <rect key="frame" x="0.0" y="331" width="666.5" height="44"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <items>
                                     <barButtonItem systemItem="play" id="ieM-4b-hzk">
                                         <connections>
@@ -89,6 +93,7 @@
                                         </connections>
                                     </barButtonItem>
                                 </items>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </toolbar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mRL-6L-6eG">
                                 <rect key="frame" x="211" y="15" width="245" height="105"/>
@@ -97,9 +102,9 @@
                                     <constraint firstAttribute="height" constant="105" id="IkI-Z4-8Ed"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="80"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <color key="shadowColor" red="0.99195677042007446" green="0.99622899293899536" blue="0.99192315340042114" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="shadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <size key="shadowOffset" width="2" height="5"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iMO-ak-Ij6">
                                 <rect key="frame" x="505" y="20" width="100" height="100"/>
@@ -118,25 +123,27 @@
                                     <action selector="slider:" destination="BYZ-38-t0r" eventType="valueChanged" id="Pqk-Tw-tGq"/>
                                 </connections>
                             </slider>
-                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="AFX-Ca-b31">
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="AFX-Ca-b31">
                                 <rect key="frame" x="507.5" y="128" width="94" height="29"/>
-                                <color key="tintColor" red="0.99194461107254028" green="0.99615627527236938" blue="0.99600595235824585" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="awayScoreStepper:" destination="BYZ-38-t0r" eventType="valueChanged" id="a7T-xo-0gQ"/>
                                 </connections>
                             </stepper>
                         </subviews>
-                        <color key="backgroundColor" red="0.027368441224098206" green="0.026998478919267654" blue="0.051822014153003693" alpha="0.75452161815068497" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="H1f-Ey-HHO" firstAttribute="trailing" secondItem="mRL-6L-6eG" secondAttribute="trailing" id="2pm-uG-O40"/>
                             <constraint firstItem="mRL-6L-6eG" firstAttribute="leading" secondItem="Qra-ZH-dVg" secondAttribute="trailing" constant="45" id="3TJ-Te-K7K"/>
                             <constraint firstItem="mRL-6L-6eG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-5" id="8Zo-ry-Iw4"/>
                             <constraint firstItem="jL8-JQ-PFk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8b7-Tz-FSw"/>
+                            <constraint firstItem="k3v-C6-c9W" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="BB2-Hf-LZP"/>
+                            <constraint firstItem="jL8-JQ-PFk" firstAttribute="top" secondItem="k3v-C6-c9W" secondAttribute="bottom" id="CRN-Lr-0ax"/>
                             <constraint firstItem="iMO-ak-Ij6" firstAttribute="leading" secondItem="mRL-6L-6eG" secondAttribute="trailing" constant="49" id="FYj-ee-NXG"/>
                             <constraint firstItem="H1f-Ey-HHO" firstAttribute="top" secondItem="RFx-Tr-xxz" secondAttribute="bottom" constant="15" id="Gkd-44-PoK"/>
                             <constraint firstItem="B1v-di-Z4P" firstAttribute="leading" secondItem="mRL-6L-6eG" secondAttribute="trailing" constant="39" id="IER-rE-jFd"/>
                             <constraint firstItem="jL8-JQ-PFk" firstAttribute="centerX" secondItem="H1f-Ey-HHO" secondAttribute="centerX" id="KC5-zD-ETh"/>
                             <constraint firstItem="B1v-di-Z4P" firstAttribute="top" secondItem="AFX-Ca-b31" secondAttribute="bottom" constant="8" id="LGL-0o-0sx"/>
+                            <constraint firstAttribute="trailing" secondItem="k3v-C6-c9W" secondAttribute="trailing" id="MlW-Ke-WtM"/>
                             <constraint firstItem="2eX-Su-AhX" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="PQ3-A5-Ork"/>
                             <constraint firstItem="iMO-ak-Ij6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Syh-td-ghX"/>
                             <constraint firstItem="RFx-Tr-xxz" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="UhL-yG-dam"/>
@@ -147,14 +154,17 @@
                             <constraint firstItem="AFX-Ca-b31" firstAttribute="top" secondItem="iMO-ak-Ij6" secondAttribute="bottom" constant="8" id="cUJ-5y-HLL"/>
                             <constraint firstItem="mRL-6L-6eG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dwr-Pc-WkP"/>
                             <constraint firstItem="xds-Dz-Ode" firstAttribute="top" secondItem="Qra-ZH-dVg" secondAttribute="bottom" constant="8" id="eYd-Al-UfJ"/>
+                            <constraint firstItem="k3v-C6-c9W" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="gJl-C5-Hyv"/>
                             <constraint firstItem="mRL-6L-6eG" firstAttribute="leading" secondItem="xds-Dz-Ode" secondAttribute="trailing" constant="30" id="hmJ-vh-21b"/>
                             <constraint firstItem="AFX-Ca-b31" firstAttribute="leading" secondItem="mRL-6L-6eG" secondAttribute="trailing" constant="51.333333333333258" id="wHr-6h-ntz"/>
                             <constraint firstItem="mRL-6L-6eG" firstAttribute="leading" secondItem="2eX-Su-AhX" secondAttribute="trailing" constant="43" id="wJL-Q3-Sdb"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="awayLabel" destination="B1v-di-Z4P" id="iEZ-0U-WZ6"/>
                         <outlet property="awayScore" destination="iMO-ak-Ij6" id="37o-20-1md"/>
                         <outlet property="awayStepper" destination="AFX-Ca-b31" id="xD6-WB-zLh"/>
+                        <outlet property="homeLabel" destination="xds-Dz-Ode" id="dyD-Yy-Wbj"/>
                         <outlet property="homeScore" destination="2eX-Su-AhX" id="XAl-wZ-4Ym"/>
                         <outlet property="homeStepper" destination="Qra-ZH-dVg" id="SXF-yw-acl"/>
                         <outlet property="sliderOutlet" destination="H1f-Ey-HHO" id="eYe-4s-RA1"/>
@@ -163,9 +173,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="33.733133433283363" y="28"/>
         </scene>
     </scenes>
     <resources>
         <image name="KHL_logo_shield.svg.png" width="947" height="1024"/>
+        <image name="bg.jpg" width="1300" height="866"/>
     </resources>
 </document>

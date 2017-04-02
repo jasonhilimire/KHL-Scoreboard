@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A37AA5741E915DE5003DA3E5 /* bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A37AA5731E915DE5003DA3E5 /* bg.jpg */; };
 		A3F45F551DF1D7A2007ED140 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F45F541DF1D7A2007ED140 /* AppDelegate.swift */; };
 		A3F45F571DF1D7A2007ED140 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3F45F561DF1D7A2007ED140 /* ViewController.swift */; };
 		A3F45F5A1DF1D7A2007ED140 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3F45F581DF1D7A2007ED140 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A37AA5731E915DE5003DA3E5 /* bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpg; sourceTree = "<group>"; };
 		A3F45F511DF1D7A2007ED140 /* KHL Scoreboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KHL Scoreboard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3F45F541DF1D7A2007ED140 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3F45F561DF1D7A2007ED140 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 				A3F45F561DF1D7A2007ED140 /* ViewController.swift */,
 				A3F45F581DF1D7A2007ED140 /* Main.storyboard */,
 				A3F45F5B1DF1D7A2007ED140 /* Assets.xcassets */,
+				A37AA5731E915DE5003DA3E5 /* bg.jpg */,
 				A3F45F661DF1DCE8007ED140 /* KHL_logo_shield.svg.png */,
 				A3F45F5D1DF1D7A2007ED140 /* LaunchScreen.storyboard */,
 				A3F45F601DF1D7A2007ED140 /* Info.plist */,
@@ -105,7 +108,7 @@
 				};
 			};
 			buildConfigurationList = A3F45F4C1DF1D7A2007ED140 /* Build configuration list for PBXProject "KHL Scoreboard" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -127,6 +130,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A37AA5741E915DE5003DA3E5 /* bg.jpg in Resources */,
 				A3F45F5F1DF1D7A2007ED140 /* LaunchScreen.storyboard in Resources */,
 				A3F45F5C1DF1D7A2007ED140 /* Assets.xcassets in Resources */,
 				A3F45F5A1DF1D7A2007ED140 /* Main.storyboard in Resources */,
