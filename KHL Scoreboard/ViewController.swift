@@ -78,8 +78,6 @@ class ViewController: UIViewController {
     
 // Toolbar
     
-        
-
     @IBOutlet weak var playOutlet: UIBarButtonItem!
     @IBAction func playButton(_ sender: Any) { // Starts the Timer
         
@@ -94,8 +92,6 @@ class ViewController: UIViewController {
     }
     
   
-   
-    
     @IBAction func pauseButton(_ sender: Any) { //Pauses the Timer
         timer.invalidate()
         sliderOutlet.isHidden = false
@@ -115,9 +111,6 @@ class ViewController: UIViewController {
         awayScore.text = String(0)
         awayStepper.value = 0
         sliderOutlet.isHidden = false
-        
-        
-        
     }
     
    
