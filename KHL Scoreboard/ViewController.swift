@@ -50,7 +50,9 @@ class ViewController: UIViewController {
         homeScore.text = "\(Int(homeStepper.value))"
     }
     
-// Controls Away Score
+    @IBOutlet weak var homeLabel: UILabel!
+
+    // Controls Away Score
     
     @IBOutlet weak var awayScore: UILabel!
     @IBOutlet weak var awayStepper: UIStepper!
@@ -58,6 +60,7 @@ class ViewController: UIViewController {
         
         awayScore.text = "\(Int(awayStepper.value))"
     }
+    @IBOutlet weak var awayLabel: UILabel!
     
 // Timer
     
@@ -134,12 +137,13 @@ class ViewController: UIViewController {
         {
             //ERROR
         }
+        
+        homeScore.layer.borderWidth = 1
+        homeLabel.layer.borderWidth = 1
+        awayScore.layer.borderWidth = 1
+        awayLabel.layer.borderWidth = 1
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
 
 
 }

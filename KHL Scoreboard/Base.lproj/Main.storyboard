@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16C53a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16F43c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -26,6 +27,9 @@
                             <userLayoutGuide location="187" affinity="minY"/>
                         </userGuides>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="NYP-Wz-Pvl">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="331"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2eX-Su-AhX">
                                 <rect key="frame" x="77" y="88" width="101" height="100"/>
                                 <color key="backgroundColor" red="0.078396700319999998" green="0.48059427739999999" blue="0.75471824409999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -43,6 +47,7 @@
                                     <constraint firstAttribute="height" constant="29" id="ONb-ai-8gy"/>
                                     <constraint firstAttribute="width" constant="94" id="Rmp-k2-ACd"/>
                                 </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <action selector="homeScoreStepper:" destination="BYZ-38-t0r" eventType="valueChanged" id="IDM-Sc-Yw8"/>
                                 </connections>
@@ -67,6 +72,9 @@
                             </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jL8-JQ-PFk">
                                 <rect key="frame" x="0.0" y="331" width="666.5" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="67y-sv-YdE"/>
+                                </constraints>
                                 <items>
                                     <barButtonItem systemItem="play" id="ieM-4b-hzk">
                                         <connections>
@@ -86,6 +94,7 @@
                                         </connections>
                                     </barButtonItem>
                                 </items>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </toolbar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mRL-6L-6eG">
                                 <rect key="frame" x="211" y="15" width="245" height="105"/>
@@ -94,8 +103,10 @@
                                     <constraint firstAttribute="height" constant="105" id="IkI-Z4-8Ed"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="80"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="2" height="5"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="1" maxValue="15" translatesAutoresizingMaskIntoConstraints="NO" id="H1f-Ey-HHO">
                                 <rect key="frame" x="209" y="266.5" width="249" height="31"/>
@@ -136,25 +147,31 @@
                                 </connections>
                             </stepper>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="NYP-Wz-Pvl" secondAttribute="trailing" id="12l-rl-grg"/>
                             <constraint firstItem="H1f-Ey-HHO" firstAttribute="trailing" secondItem="mRL-6L-6eG" secondAttribute="trailing" id="2pm-uG-O40"/>
                             <constraint firstItem="B1v-di-Z4P" firstAttribute="top" secondItem="AFX-Ca-b31" secondAttribute="bottom" constant="8" id="3bh-7j-xu6"/>
                             <constraint firstItem="B1v-di-Z4P" firstAttribute="leading" secondItem="H1f-Ey-HHO" secondAttribute="trailing" constant="19" id="8FQ-45-vZA"/>
                             <constraint firstItem="mRL-6L-6eG" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-5" id="8Zo-ry-Iw4"/>
                             <constraint firstItem="jL8-JQ-PFk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8b7-Tz-FSw"/>
+                            <constraint firstItem="jL8-JQ-PFk" firstAttribute="top" secondItem="NYP-Wz-Pvl" secondAttribute="bottom" id="9PX-PQ-PLL"/>
+                            <constraint firstItem="NYP-Wz-Pvl" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Atc-w1-ueN"/>
+                            <constraint firstItem="jL8-JQ-PFk" firstAttribute="top" secondItem="NYP-Wz-Pvl" secondAttribute="bottom" id="DyG-kM-rSo"/>
                             <constraint firstItem="H1f-Ey-HHO" firstAttribute="top" secondItem="RFx-Tr-xxz" secondAttribute="bottom" constant="15" id="Gkd-44-PoK"/>
+                            <constraint firstItem="NYP-Wz-Pvl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IUc-sr-xyT"/>
                             <constraint firstItem="jL8-JQ-PFk" firstAttribute="centerX" secondItem="H1f-Ey-HHO" secondAttribute="centerX" id="KC5-zD-ETh"/>
                             <constraint firstItem="AFX-Ca-b31" firstAttribute="centerX" secondItem="iMO-ak-Ij6" secondAttribute="centerX" id="Lvz-BW-OZZ"/>
                             <constraint firstItem="AFX-Ca-b31" firstAttribute="top" secondItem="iMO-ak-Ij6" secondAttribute="bottom" constant="8" id="P6n-Ao-4KT"/>
                             <constraint firstItem="Qra-ZH-dVg" firstAttribute="top" secondItem="2eX-Su-AhX" secondAttribute="bottom" constant="8" id="RNw-ZQ-gXg"/>
                             <constraint firstItem="2eX-Su-AhX" firstAttribute="top" secondItem="mRL-6L-6eG" secondAttribute="bottom" constant="-32" id="RhG-yj-apj"/>
+                            <constraint firstItem="NYP-Wz-Pvl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="T8Q-0b-PDa"/>
                             <constraint firstItem="RFx-Tr-xxz" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="UhL-yG-dam"/>
                             <constraint firstItem="RFx-Tr-xxz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="V1G-ha-zHq"/>
                             <constraint firstItem="H1f-Ey-HHO" firstAttribute="leading" secondItem="mRL-6L-6eG" secondAttribute="leading" id="Vgj-xK-elh"/>
                             <constraint firstItem="jL8-JQ-PFk" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="WtX-C4-55V"/>
                             <constraint firstItem="mRL-6L-6eG" firstAttribute="leading" secondItem="2eX-Su-AhX" secondAttribute="trailing" constant="33.666666666666657" id="auz-lH-tnM"/>
                             <constraint firstItem="mRL-6L-6eG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dwr-Pc-WkP"/>
+                            <constraint firstItem="NYP-Wz-Pvl" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="iDy-yz-CiY"/>
                             <constraint firstItem="iMO-ak-Ij6" firstAttribute="leading" secondItem="mRL-6L-6eG" secondAttribute="trailing" constant="29" id="kQv-lZ-2t3"/>
                             <constraint firstItem="xds-Dz-Ode" firstAttribute="top" secondItem="Qra-ZH-dVg" secondAttribute="bottom" constant="8" id="lth-hP-Qlq"/>
                             <constraint firstItem="B1v-di-Z4P" firstAttribute="top" secondItem="AFX-Ca-b31" secondAttribute="bottom" constant="8" symbolic="YES" id="pOE-pW-Xjp"/>
@@ -165,8 +182,10 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="awayLabel" destination="B1v-di-Z4P" id="Dza-QP-jAX"/>
                         <outlet property="awayScore" destination="iMO-ak-Ij6" id="37o-20-1md"/>
                         <outlet property="awayStepper" destination="AFX-Ca-b31" id="xD6-WB-zLh"/>
+                        <outlet property="homeLabel" destination="xds-Dz-Ode" id="16S-gF-8fy"/>
                         <outlet property="homeScore" destination="2eX-Su-AhX" id="XAl-wZ-4Ym"/>
                         <outlet property="homeStepper" destination="Qra-ZH-dVg" id="SXF-yw-acl"/>
                         <outlet property="newGameOutlet" destination="XE0-nT-TsD" id="jXx-af-eu6"/>
@@ -177,10 +196,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="36" y="110"/>
+            <point key="canvasLocation" x="35.532233883058474" y="109.59999999999999"/>
         </scene>
     </scenes>
     <resources>
         <image name="KHL_logo_shield.svg.png" width="947" height="1024"/>
+        <image name="bg.jpg" width="1300" height="866"/>
     </resources>
 </document>
